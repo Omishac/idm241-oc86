@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alpha Descriptions</title>
+</head>
+<body>
+
+<h1>Poppi Soda</h1>
+     <p>Link to site: 
+        <a href="https://drinkpoppi.com/collections/drinks">https://drinkpoppi.com/collections/drinks</a>
+    </p>
+
+<h3>TRIGGERS:</h3>
+<ul>
+    <li>Hover On the buy now button</li>
+    <li>Hover Off the buy now button</li>
+    <li>User Clicks on Soda icon</li>
+</ul>
+
+<h3>RULES:</h3>
+<ul>
+    <li>Hover On- cursor changes to finger, shadow effect of button fills into solid color, 'buy now' text changes colors</li>
+    <li>Hover Off- cursor changes to pointer,shadow effect reappears on button, 'buy now' text changes colors</li>
+    <li>Click On Soda Icon- cursor changes to finger and soda can flips to see the other side of can</li>
+</ul>
+
+<h3>FEEDBACK:</h3>
+<ul>
+    <li>Hover On- cursor changes to finger, shadow effect of button fills into solid color, 'buy now' text changes colors</li>
+    <li>Hover Off- cursor changes to pointer,shadow effect reappears on button, 'buy now' text changes colors</li>
+    <li>Click On Soda Icon- cursor changes to finger and soda can flips to see the other side of can</li>
+</ul>
+
+<h3>LOOPS &amp; MODES:</h3>
+    <ul>
+        <li>None</li>
+    </ul>
+
+    <video width="320" height="240" autoplay muted>
+        <source src="./poppivid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+</body>
+</html>
