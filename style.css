@@ -1,0 +1,18 @@
+body {
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: #FFB6C1;
+    margin: 0;
+    padding-left: 20px;
+}
+
+a {
+    color: black; 
+}
+
+a:visited {
+    color: black;
+}
+
+h4{
+    font-style: italic;
+}
