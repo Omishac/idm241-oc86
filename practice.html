@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+    <div class="card">
+        <img src="./img/cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> <h1>Cherry Soda</h1>
+        <button class="buy-now-btn">Buy Now</button> 
+
+        <button type="button" class="soda-btn">
+            <img src="./img/sodacan.png" alt="Soda Button Image" id="soda-image">
+        </button> 
+    </div>    
+    <script>
+        function toggleImage() {
+            const cherryColaImage = document.getElementById('cherryColaImage');
+            const originalSrc = './img/cherry-cola.png';
+            const newSrc = './img/cherry-cola2.png';
+
+            if (cherryColaImage.src === originalSrc) {
+                cherryColaImage.src = newSrc;
+            } else {
+                cherryColaImage.src = originalSrc;
+            }
+        }
+        const sodaButton = document.querySelector('.soda-btn');
+        sodaButton.addEventListener('click', toggleImage);
+    </script>
+</body>
+</html>
