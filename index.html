@@ -9,24 +9,22 @@
         <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> <h1>Cherry Soda</h1>
         <button class="buy-now-btn">Buy Now</button> 
 
-        <button type="button" class="soda-btn">
-            <img src="./sodacan.png" alt="Soda Button Image" id="soda-image">
+        <button type="button" class="soda-btn" onclick="toggleImage()">
+            <img src="./cherry-cola.png" alt="Soda Button Image">
         </button> 
-    </div>    
+    </div>
+
     <script>
         function toggleImage() {
             const cherryColaImage = document.getElementById('cherryColaImage');
-            const originalSrc = 'cherry-cola.png';
-            const newSrc = 'cherry-cola2.png';
 
-            if (cherryColaImage.src === originalSrc) {
-                cherryColaImage.src = newSrc;
+            // Check the current source and toggle accordingly
+            if (cherryColaImage.src.includes('cherry-cola.png')) {
+                cherryColaImage.src = 'cherry-cola2.png'; // Change to the new image
             } else {
-                cherryColaImage.src = originalSrc;
+                cherryColaImage.src = 'cherry-cola.png'; // Change back to the original image
             }
         }
-        const sodaButton = document.querySelector('.soda-btn');
-        sodaButton.addEventListener('click', toggleImage);
     </script>
 </body>
 </html>
