@@ -82,31 +82,37 @@ h4{
   box-sizing: border-box;
 }
 
-/* Create four equal columns that floats next to each other */
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between; /* Evenly distributes space between columns */
+  margin: 0 auto; /* Centers the row on the page */
+  padding: 10px; /* Adds some space around the content */
+}
 
-
+/* Flexbox columns */
 .column {
-  float: left;
-  width: 25%;
-  padding: 15px;
-  margin-top: 30px;
-  
+  flex: 1; /* Each column takes equal width */
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding is included in width */
 }
 
-h3{
-  color:#700058;
-}
-h4{
-  color:#930775;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
+/* Stack columns on small screens */
+@media (max-width: 600px) {
   .column {
-    width: 100%;
+      flex: 0 0 100%; /* Each column takes full width on small screens */
+  }
+}
+
+/* Responsive layout for medium and larger screens */
+@media (min-width: 601px) {
+  .column {
+      flex: 0 0 48%; /* Two columns at medium screen sizes */
+  }
+}
+
+@media (min-width: 900px) {
+  .column {
+      flex: 0 0 23%; /* Four columns at larger screen sizes */
   }
 }
