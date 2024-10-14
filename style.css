@@ -1,0 +1,67 @@
+.card {
+    border: 2px solid #700058;
+    max-width: 300px;
+    width: 400px;
+    height: 400px;
+    margin: 80px auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+    background-image: linear-gradient(red, #700058);
+    position: relative;
+  }
+  
+ h1{
+    color: red;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    padding-top: 10px;
+    margin-bottom: -20px;
+    position: relative;
+    top: -30px; 
+ }
+  
+img {
+    width: 320px;
+    margin-top: -29px;
+    margin-left: -18px;
+}
+
+.buy-now-btn {
+  border: 3px solid red;
+  padding: 12px;
+  color: red;
+  font-weight: bold;
+  background-color: #700058;
+  cursor: pointer;
+  width: 115%;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 25px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 200px;
+}
+
+.buy-now-btn:hover {
+  color: #700058;
+  background-color: red;
+}
+
+.soda-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px; 
+  left: 10px; 
+  width: 50px; 
+  height: 100px; 
+}
+
+.soda-btn img {
+  width: 30px; 
+  height: auto; 
+  object-fit: contain; 
+}
