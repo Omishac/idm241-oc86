@@ -3,7 +3,7 @@
     max-width: 300px;
     width: 400px;
     height: 400px;
-    margin: 80px auto;
+    margin: 30px auto;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     border-top-left-radius: 180px;
@@ -64,4 +64,49 @@ img {
   width: 30px; 
   height: auto; 
   object-fit: contain; 
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace; 
+  background-color: #e8c6cd;
+  margin: 0;
+  padding-left: 40px; 
+  padding-right: 40px; 
+}
+
+h4{
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 15px;
+  margin-top: 30px;
+  
+}
+
+h3{
+  color:#700058;
+}
+h4{
+  color:#930775;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
