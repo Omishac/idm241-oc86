@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Alpha Descriptions</title>
-<link rel="stylesheet" href="style.css">
+    <title>Alpha Build</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="card">
+        <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> <h1>Cherry Soda</h1>
+        <button class="buy-now-btn">Buy Now</button> 
 
-<h1>Poppi Soda</h1>
-     <p>Link to site: 
-        <a href="https://drinkpoppi.com/collections/drinks" target="_blank">Poppi Soda</a>
+        <button type="button" class="soda-btn" onclick="toggleImage()">
+            <img src="./sodacan.png" alt="Soda Button Image">
+        </button> 
+    </div>
 
-<h3>TRIGGERS:</h3>
-
-<h4>Soda Icon - Default</h4>
-<ul>
-    <li>Hover On </li>
-    <li>Hover Off</li>
-    <li>Click On</li>
-    <li>Click Off</li>
-</ul>
-
-<h4>Soda Icon - Active</h4>
-<ul>
-    <li>Hover On </li>
-    <li>Hover Off</li>
-    <li>Click On</li>
-    <li>Click Off</li>
-</ul>
-
-<h3>RULES:</h3>
-
-<h4>Soda Icon - Default</h4>
-<ul>
-    <li>Hover On- Cursor changes to finger </li>
-    <li>Hover Off- Cursor changes back to pointer</li>
-    <li>Click On- Soda Image changes to back of can</li>
-    <li>Click Off- Soda Image changes to front of can</li>
-  
-</ul>
-
-<h4>Soda Icon - Active</h4>
-<ul>
-    <li>Hover On- Cursor changes to finger </li>
-    <li>Hover Off- Cursor changes back to pointer</li>
-    <li>Click On- Soda Image changes to front of Soda Can</li>
-    <li>Click Off- Soda Image changes to back of can</li>
-</ul>
-
-
-<h3>FEEDBACK:</h3>
-
-<h4>Soda Icon - Default</h4>
-<ul>
-    <li>Hover On- Cursor changes to finger </li>
-    <li>Hover Off- Cursor changes back to pointer</li>
-    <li>Click On- Soda Image changes to back of can</li>
-    <li>Click Off- Soda Image changes to front of can</li>
-  
-</ul>
-
-<h4>Soda Icon - Active</h4>
-<ul>
-    <li>Hover On- Cursor changes to finger </li>
-    <li>Hover Off- Cursor changes back to pointer</li>
-    <li>Click On- Soda Image changes to front of Soda Can</li>
-    <li>Click Off- Soda Image changes to back of can</li>
-</ul>
-
-
-
-<h3>LOOPS &amp; MODES:</h3>
+    <div class="row">
+        <div class="column">
+          <h3>TRIGGERS:</h3>
+          <h4>Soda Icon - Default</h4>
     <ul>
-        <li>Mode: Soda image switches between front view and back view</li>
+        <li>Hover On </li>
+        <li>Hover Off</li>
+        <li>Click On</li>
+        <li>Click Off</li>
     </ul>
+    
+    <h4>Soda Icon - Active</h4>
+    <ul>
+        <li>Hover On </li>
+        <li>Hover Off</li>
+        <li>Click On</li>
+        <li>Click Off</li>
+    </ul>
+        </div>
 
-<h3>Video:</h3>
-<IMG SRC="./poppiicon.gif" width="200" height="300">
+        <div class="column" >
+            <h3>RULES:</h3>
+            <h4>Soda Icon - Default</h4>
+            <ul>
+                <li>Hover On- Cursor changes to finger </li>
+                <li>Hover Off- Cursor changes back to pointer</li>
+                <li>Click On- Soda Image changes to back of can</li>
+                <li>Click Off- Soda Image changes to front of can</li>
+            </ul>
+            <h4>Soda Icon - Active</h4>
+            <ul>
+                <li>Hover On- Cursor changes to finger </li>
+                <li>Hover Off- Cursor changes back to pointer</li>
+                <li>Click On- Soda Image changes to front of Soda Can</li>
+                <li>Click Off- Soda Image changes to back of can</li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h3>FEEDBACK:</h3>
+    
+    <h4>Soda Icon - Default</h4>
+    <ul>
+        <li>Hover On- Cursor changes to finger </li>
+        <li>Hover Off- Cursor changes back to pointer</li>
+        <li>Click On- Soda Image changes to back of can</li>
+        <li>Click Off- Soda Image changes to front of can</li>
+      
+    </ul>
+    <h4>Soda Icon - Active</h4>
+    <ul>
+        <li>Hover On- Cursor changes to finger </li>
+        <li>Hover Off- Cursor changes back to pointer</li>
+        <li>Click On- Soda Image changes to front of Soda Can</li>
+        <li>Click Off- Soda Image changes to back of can</li>
+    </ul>       
+        </div>
+
+        <div class="column">
+            <h3>LOOPS &amp; MODES:</h3>
+        <ul>
+            <li>Mode: Soda image switches between front view and back view</li>
+        </ul>
+        </div>
+      </div>
+
+   
+   
+
+    <script>
+        function toggleImage() {
+            const cherryColaImage = document.getElementById('cherryColaImage');
+
+            if (cherryColaImage.src.includes('cherry-cola.png')) {
+                cherryColaImage.src = 'cherry-cola2.png'; 
+            } else {
+                cherryColaImage.src = 'cherry-cola.png'; 
+            }
+        }
+    </script>
 </body>
 </html>
