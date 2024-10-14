@@ -1,7 +1,6 @@
 .card {
     border: 2px solid #700058;
-    max-width: 300px;
-    width: 400px;
+    max-width: 330px;
     height: 400px;
     margin: 30px auto;
     text-align: center;
@@ -15,7 +14,6 @@
  h1{
     color: red;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bolder;
     padding-top: 10px;
     margin-bottom: -20px;
     position: relative;
@@ -36,11 +34,10 @@ img {
   background-color: #700058;
   cursor: pointer;
   width: 115%;
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   border-radius: 25px;
   margin-left: -20px;
-  margin-right: -20px;
   margin-bottom: 200px;
 }
 
@@ -63,13 +60,11 @@ img {
 .soda-btn img {
   width: 30px; 
   height: auto; 
-  object-fit: contain; 
 }
 
 body {
   font-family: 'Courier New', Courier, monospace; 
   background-color: #e8c6cd;
-  margin: 0;
   padding-left: 40px; 
   padding-right: 40px; 
 }
@@ -83,32 +78,30 @@ h3{
   color:#700058;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 .row {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 40px;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(4, 1fr); /* Default: Four columns */
+    grid-template-columns: repeat(4, 1fr); 
 }
 
 .column {
-  flex: 1 1 calc(25% - 30px); /* Default to four columns minus space */
-  margin: 15px; /* Adds margin around columns */
-  box-sizing: border-box; /* Ensures padding is included in total width */
+    flex: 1 1 25%; 
+    margin: 15px;
+    box-sizing: border-box; 
 }
 
 @media (max-width: 900px) {
     .row {
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 600px) {
     .row {
-        grid-template-columns: 1fr; /* One column */
+        grid-template-columns: 1fr; 
     }
 }
