@@ -88,10 +88,11 @@ h3{
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to wrap onto new lines */
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr); /* Default: Four columns */
 }
 
 .column {
@@ -101,13 +102,13 @@ h3{
 }
 
 @media (max-width: 900px) {
-  .column {
-      flex: 1 1 calc(50% - 30px); /* Two columns for medium screens */
-  }
+    .row {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
 }
 
 @media (max-width: 600px) {
-  .column {
-      flex: 1 1 100%; /* One column for small screens */
-  }
+    .row {
+        grid-template-columns: 1fr; /* One column */
+    }
 }
