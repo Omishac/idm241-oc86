@@ -78,8 +78,6 @@ h3{
   color:#700058;
 }
 
-
-
 .row {
     max-width: 1200px;
     margin: 0 auto;
@@ -168,4 +166,67 @@ h3{
     .row {
         grid-template-columns: 1fr; 
     }
+}
+
+@media screen and (max-width: 430px) {
+  .row {
+    grid-template-columns: 1fr; 
+  }
+  
+  .card {
+    border: 2px solid #700058;
+    max-width: 300px; /* Reduce width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top-left-radius: 150px; /* Reduce the top radius for smaller screens */
+    border-top-right-radius: 150px;
+    background-image: linear-gradient(red, #700058);
+    position: relative;
+  }
+
+  h1 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding-top: 8px;
+    margin-bottom: -15px;
+    top: -25px;
+  }
+
+  img {
+    width: 280px; /* Reduce image size */
+    margin-top: -20px;
+    margin-left: -10px;
+  }
+
+  .buy-now-btn {
+    border: 2px solid red;
+    padding: 10px; /* Adjust padding */
+    color: red;
+    font-weight: bold;
+    background-color: #700058;
+    cursor: pointer;
+    width: 100%; /* Ensure the button stays within the card width */
+    font-size: 18px; /* Adjust font size */
+    margin-left: 0; /* Center the button */
+    margin-bottom: 100px;
+    border-radius: 20px;
+  }
+
+  .buy-now-btn:hover {
+    color: #700058;
+    background-color: red;
+  }
+
+  .soda-btn {
+    width: 40px; /* Reduce button size */
+    height: 80px; 
+    bottom: 8px; 
+    left: 8px;
+  }
+
+  .soda-btn img {
+    width: 25px; /* Adjust soda button image size */
+    height: auto;
+  }
 }
