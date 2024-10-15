@@ -92,23 +92,23 @@ box-sizing: border-box;
   margin: 0 auto;
   padding: 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Default: Four columns */
+  grid-template-columns: repeat(4, 1fr); 
 }
 
 .column {
-flex: 1 1 calc(25% - 30px); /* Default to four columns minus space */
-margin: 15px; /* Adds margin around columns */
-box-sizing: border-box; /* Ensures padding is included in total width */
+flex: 1 1 calc(25% - 30px); 
+margin: 15px; 
+box-sizing: border-box; 
 }
 
 @media (max-width: 900px) {
   .row {
-      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 600px) {
   .row {
-      grid-template-columns: 1fr; /* One column */
+      grid-template-columns: 1fr; 
   }
 }
