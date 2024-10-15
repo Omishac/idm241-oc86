@@ -1,114 +1,65 @@
-.card {
-  border: 2px solid #700058;
-  max-width: 300px;
-  width: 400px;
-  height: 400px;
-  margin: 30px auto;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  border-top-left-radius: 180px;
-  border-top-right-radius: 180px;
-  background-image: linear-gradient(red, #700058);
-  position: relative;
-}
-
-h1{
-  color: red;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bolder;
-  padding-top: 10px;
-  margin-bottom: -20px;
-  position: relative;
-  top: -30px; 
-}
-
-img {
-  width: 320px;
-  margin-top: -29px;
-  margin-left: -18px;
-}
-
-.buy-now-btn {
-border: 3px solid red;
-padding: 12px;
-color: red;
-font-weight: bold;
-background-color: #700058;
-cursor: pointer;
-width: 115%;
-font-size: 18px;
-font-family: 'Times New Roman', Times, serif;
-border-radius: 25px;
-margin-left: -20px;
-margin-right: -20px;
-margin-bottom: 200px;
-}
-
-.buy-now-btn:hover {
-color: #700058;
-background-color: red;
-}
-
-.soda-btn {
-background-color: transparent;
-border: none;
-cursor: pointer;
-position: absolute;
-bottom: 10px; 
-left: 10px; 
-width: 50px; 
-height: 100px; 
-}
-
-.soda-btn img {
-width: 30px; 
-height: auto; 
-object-fit: contain; 
-}
-
 body {
-font-family: 'Courier New', Courier, monospace; 
-background-color: #e8c6cd;
-margin: 0;
-padding-left: 40px; 
-padding-right: 40px; 
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: #FFB6C1;
+    margin: 0;
+    padding-left: 40px; 
+    padding-right: 40px; 
+}
+
+a {
+    color: black; 
+}
+
+a:visited {
+    color: black;
 }
 
 h4{
-color:#930775;
-font-style: italic;
+    font-style: italic;
 }
 
-h3{
-color:#700058;
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px; 
+    }
+
+    h3 {
+        font-size: 24px; 
+    }
+
+    h4 {
+        font-size: 20px; 
+    }
+
+    li {
+        font-size: 18px; 
+    }
+
+    body {
+        padding-left: 10px;
+    }
 }
 
-* {
-box-sizing: border-box;
-}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; 
+    }
 
-.row {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-}
+    h3 {
+        font-size: 20px; 
+    }
 
-.column {
-flex: 1 1 calc(25% - 30px); 
-margin: 15px; 
-box-sizing: border-box; 
-}
+    h4 {
+        font-size: 18px; 
+    }
 
-@media (max-width: 900px) {
-  .row {
-      grid-template-columns: repeat(2, 1fr); 
-  }
-}
+    li {
+        font-size: 16px; 
+    }
 
-@media (max-width: 600px) {
-  .row {
-      grid-template-columns: 1fr; 
-  }
+    body {
+        padding-left: 5px; 
+    }
 }
