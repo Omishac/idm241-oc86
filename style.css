@@ -79,6 +79,7 @@ h3{
 }
 
 
+
 .row {
     max-width: 1200px;
     margin: 0 auto;
@@ -97,6 +98,9 @@ h3{
 @media (max-width: 900px) {
     .row {
         grid-template-columns: repeat(2, 1fr); 
+    }
+    img{
+      width: 120px;
     }
 }
 
