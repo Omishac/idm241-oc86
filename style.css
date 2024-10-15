@@ -90,8 +90,8 @@ box-sizing: border-box;
 .row {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px;
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(4, 1fr); /* Default: Four columns */
 }
 
