@@ -1,65 +1,97 @@
+
+h1{
+  color: black;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  padding-top: 10px;
+  margin-bottom: -20px;
+  position: relative;
+  margin-top: 50px;
+}
+
+p{
+  margin-top: 35px;
+}
+
 body {
-    font-family: 'Courier New', Courier, monospace; 
-    background-color: #FFB6C1;
-    margin: 0;
-    padding-left: 40px; 
-    padding-right: 40px; 
+font-family: 'Courier New', Courier, monospace; 
+background-color: #e8c6cd;
+margin: 0;
+padding-left: 40px; 
+padding-right: 40px; 
 }
 
-a {
-    color: black; 
-}
-
-a:visited {
-    color: black;
+h2 {
+  margin-top: 30px;
 }
 
 h4{
-    font-style: italic;
+color:#930775;
+font-style: italic;
+}
+
+h3{
+color:#700058;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: -50px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.column {
+flex: 1 1 calc(25% - 30px); 
+margin: 15px; 
+box-sizing: border-box; 
 }
 
 
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 30px; 
-    }
-
-    h3 {
-        font-size: 24px; 
-    }
-
-    h4 {
-        font-size: 20px; 
-    }
-
-    li {
-        font-size: 18px; 
-    }
-
-    body {
-        padding-left: 10px;
-    }
+.visualizations ul {
+  display: flex; 
+  justify-content: space-around; 
+  list-style-type: none; 
+  padding: 0; 
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px; 
-    }
+.visualizations img {
+  width: 200px; 
+  height: auto; 
+}
 
-    h3 {
-        font-size: 20px; 
-    }
+a {
+  color: #000000; 
+}
 
-    h4 {
-        font-size: 18px; 
-    }
+a:visited {
+  color: #07310f; 
+}
 
-    li {
-        font-size: 16px; 
-    }
+a:hover {
+  color: #662667; 
+}
 
-    body {
-        padding-left: 5px; 
-    }
+@media (max-width: 900px) {
+  .row {
+      grid-template-columns: repeat(2, 1fr); 
+  }
+  .visualizations {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+      grid-template-columns: 1fr; 
+  }
+  .visualizations {
+    grid-template-columns: 1fr; 
+  }
 }
