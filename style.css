@@ -4,14 +4,15 @@ h1{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bolder;
   padding-top: 10px;
-  margin-bottom: -20px;
+  margin-bottom: -10px;
   position: relative;
   margin-top: 50px;
 }
 
-p{
-  margin-top: 35px;
+ul li{
+  margin-bottom: 10px;
 }
+
 
 body {
 font-family: 'Courier New', Courier, monospace; 
@@ -22,16 +23,18 @@ padding-right: 40px;
 }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 h4{
 color:#930775;
 font-style: italic;
+
 }
 
 h3{
 color:#700058;
+margin-top: -5px;
 }
 
 * {
@@ -41,7 +44,7 @@ box-sizing: border-box;
 .row {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: -50px;
+  margin-top: -60px;
   padding: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
@@ -55,15 +58,17 @@ box-sizing: border-box;
 
 
 .visualizations ul {
-  display: flex; 
-  justify-content: space-around; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
   list-style-type: none; 
   padding: 0; 
 }
 
 .visualizations img {
-  width: 200px; 
+  width: 300px; 
   height: auto; 
+  margin-bottom: 30px; 
 }
 
 a {
