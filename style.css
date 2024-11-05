@@ -1,65 +1,142 @@
+.card {
+  border: 2px solid #700058;
+  max-width: 300px;
+  width: 400px;
+  height: 400px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+  background-image: linear-gradient(red, #700058);
+  position: relative;
+}
+
+h1{
+  color: red;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  padding-top: 10px;
+  margin-bottom: -20px;
+  position: relative;
+  top: -30px; 
+}
+
+h2{
+  margin-top: 90px;
+  margin-bottom: -55px;
+}
+
+img {
+  width: 320px;
+  margin-top: -29px;
+  margin-left: -20px;
+}
+
+.buy-now-btn {
+border: 3px solid red;
+padding: 12px;
+color: red;
+font-weight: bold;
+background-color: #700058;
+cursor: pointer;
+width: 115%;
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
+border-radius: 25px;
+margin-left: -20px;
+margin-right: -20px;
+margin-bottom: 200px;
+}
+
+
+.soda-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+position: absolute;
+bottom: 10px; 
+left: 10px; 
+width: 50px; 
+height: 100px; 
+}
+
+.soda-btn img {
+width: 30px; 
+height: auto; 
+object-fit: contain; 
+}
+
 body {
-    font-family: 'Courier New', Courier, monospace; 
-    background-color: #FFB6C1;
-    margin: 0;
-    padding-left: 40px; 
-    padding-right: 40px; 
-}
-
-a {
-    color: black; 
-}
-
-a:visited {
-    color: black;
+font-family: 'Courier New', Courier, monospace; 
+background-color: #e8c6cd;
+margin: 0;
+padding-left: 40px; 
+padding-right: 40px; 
 }
 
 h4{
-    font-style: italic;
+color:#930775;
+font-style: italic;
 }
 
-
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 30px; 
-    }
-
-    h3 {
-        font-size: 24px; 
-    }
-
-    h4 {
-        font-size: 20px; 
-    }
-
-    li {
-        font-size: 18px; 
-    }
-
-    body {
-        padding-left: 10px;
-    }
+h3{
+color:#700058;
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px; 
-    }
-
-    h3 {
-        font-size: 20px; 
-    }
-
-    h4 {
-        font-size: 18px; 
-    }
-
-    li {
-        font-size: 16px; 
-    }
-
-    body {
-        padding-left: 5px; 
-    }
+* {
+box-sizing: border-box;
 }
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.column {
+flex: 1 1 calc(25% - 30px); 
+margin: 15px; 
+box-sizing: border-box; 
+}
+
+@media (max-width: 900px) {
+  .row {
+      grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+      grid-template-columns: 1fr; 
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+.card.invert { 
+  background-image: linear-gradient(100deg, #700058, red); 
+  cursor: pointer;
+  h1{
+    color: #700058;
+  }
+ }

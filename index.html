@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> <h1>Cherry Soda</h1>
+    <h3>Beta Build:</h3>
+    <div class="card" id="productCard">
+        <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> 
+        <h1 onmouseover="invertColors()" onmouseout="revertColors()">Cherry Soda</h1> 
         <button class="buy-now-btn">Buy Now</button> 
-
-        <button type="button" class="soda-btn" onclick="toggleImage()">
-            <img src="./sodacan.png" alt="Soda Button Image">
-        </button> 
+        <button type="button" class="soda-btn" onclick="toggleImage()"> 
+        <img src="./sodacan.png" alt="Soda Button Image"> </button> 
     </div>
+    <h2>Soda Icon</h2>
     <div class="row">
         <div class="column">
-          <h3>TRIGGERS:</h3>
-          <h4>Soda Icon - Default</h4>
+        <h3>TRIGGERS:</h3>
+        <h4>Soda Icon - Default</h4>
     <ul>
         <li>Hover On </li>
         <li>Hover Off</li>
         <li>Click On</li>
         <li>Click Off</li>
     </ul>
-    
     <h4>Soda Icon - Active</h4>
     <ul>
         <li>Hover On </li>
@@ -34,45 +34,44 @@
         <li>Click Off</li>
     </ul>
         </div>
-
+    
         <div class="column" >
             <h3>RULES:</h3>
             <h4>Soda Icon - Default</h4>
             <ul>
                 <li>Hover On- Cursor changes to finger </li>
                 <li>Hover Off- Cursor changes back to pointer</li>
-                <li>Click On- Soda Image changes to back of can</li>
-                <li>Click Off- Soda Image changes to front of can</li>
+                <li>Click On- Soda image shakes and shows the back of the can</li> 
+                <li>Click Off- Soda image shakes and shows the front of the can</li> 
             </ul>
             <h4>Soda Icon - Active</h4>
             <ul>
                 <li>Hover On- Cursor changes to finger </li>
                 <li>Hover Off- Cursor changes back to pointer</li>
-                <li>Click On- Soda Image changes to front of Soda Can</li>
-                <li>Click Off- Soda Image changes to back of can</li>
+                <li>Click On- Soda card shakes and shows the front of the can</li> 
+                <li>Click Off- Soda card shakes and shows the back of the can</li> 
             </ul>
         </div>
-
-        <div class="column">
-            <h3>FEEDBACK:</h3>
     
+    <div class="column">
+    <h3>FEEDBACK:</h3>
+        
     <h4>Soda Icon - Default</h4>
     <ul>
         <li>Hover On- Cursor changes to finger </li>
         <li>Hover Off- Cursor changes back to pointer</li>
-        <li>Click On- Soda Image changes to back of can</li>
-        <li>Click Off- Soda Image changes to front of can</li>
-      
+        <li>Click On- Soda card shakes and shows the back of the can</li> 
+        <li>Click Off- Soda card shakes and shows the front of the can</li> 
     </ul>
     <h4>Soda Icon - Active</h4>
     <ul>
         <li>Hover On- Cursor changes to finger </li>
         <li>Hover Off- Cursor changes back to pointer</li>
-        <li>Click On- Soda Image changes to front of Soda Can</li>
-        <li>Click Off- Soda Image changes to back of can</li>
-    </ul>       
+        <li>Click On- Soda card shakes and shows the front of the can</li> 
+        <li>Click Off- Soda card shakes and shows the back of the can</li> 
+    </ul>  
         </div>
-
+    
         <div class="column">
             <h3>LOOPS &amp; MODES:</h3>
         <ul>
@@ -80,18 +79,75 @@
             <li>Mode: Soda image switches between front view and back view</li>
         </ul>
         </div>
-      </div>
+        </div>
+    
+    <h2>Cherry Soda label</h2>
+    <div class="row">
+        <div class="column">
+            <h3>TRIGGERS:</h3>
+            <h4>Cherry Soda label</h4>
+    <ul>
+        <li>Hover On </li>
+        <li>Hover Off</li>
+    </ul>
+    
+    <h4>Cherry Soda label</h4>
+    <ul>
+        <li>Hover On </li>
+        <li>Hover Off</li>
+    </ul>
+    </div>
+    
+    <div class="column" >
+        <h3>RULES:</h3>
+        <h4>Cherry Soda label</h4>
+        <ul>
+            <li>Hover On- Cursor changes to finger and Product Card inverts to primary color being red</li>
+            <li>Hover Off- Cursor changes back to pointer Product card reverts to original purple color</li>
+        </ul>
+    </div>
+    
+    <div class="column">
+    <h3>FEEDBACK:</h3>
+    
+    <h4>Cherry Soda label - Default</h4>
+    <ul>
+        <li>Hover On- Cursor changes to finger and Product Card inverts to primary color being red</li>
+        <li>Hover Off- Cursor changes back to pointer Product card reverts to original purple color</li>
+    </ul>
+        </div>
+    
+        <div class="column">
+            <h3>LOOPS &amp; MODES:</h3>
+        <ul>
+            <li>Loops: None</li>
+            <li>Mode: Card Color changing on Hover on/off</li>
+        </ul>
+        </div>
+        </div>
 
     <script>
         function toggleImage() {
-            const cherryColaImage = document.getElementById('cherryColaImage');
-
-            if (cherryColaImage.src.includes('cherry-cola.png')) {
-                cherryColaImage.src = 'cherry-cola2.png'; 
-            } else {
-                cherryColaImage.src = 'cherry-cola.png'; 
-            }
+        const cherryColaImage = document.getElementById('cherryColaImage'); 
+        const card = document.querySelector('.card'); 
+        
+        if (cherryColaImage.src.includes('cherry-cola.png')) {
+            cherryColaImage.src = 'cherry-cola2.png'; 
+        } else {
+            cherryColaImage.src = 'cherry-cola.png'; 
         }
+
+    
+        card.classList.add('shake');
+        
+        setTimeout(() => {
+            card.classList.remove('shake');
+        }, 500);
+    }
+
+    function invertColors() { document.getElementById('productCard').classList.add('invert'); } 
+    function revertColors() { document.getElementById('productCard').classList.remove('invert'); }
+    
     </script>
 </body>
 </html>
