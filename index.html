@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Build</title>
+    <title>Beta Build</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="card" id="productCard">
         <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> 
         <h1 onmouseover="invertColors()" onmouseout="revertColors()">Cherry Soda</h1> 
-        <button class="buy-now-btn">Buy Now</button> 
+        <button class="buy-now-btn" id="buyNowBtn">Buy Now</button>
         <button type="button" class="soda-btn" onclick="toggleImage()"> 
         <img src="./sodacan.png" alt="Soda Button Image"> </button> 
     </div>
@@ -80,7 +80,47 @@
         </ul>
         </div>
         </div>
-    
+        <h2>Buy Now Button</h2>
+        <div class="row">
+        <div class="column">
+            <h3>TRIGGERS:</h3>
+            <h4>Buy Now Button</h4>
+        <ul>
+            <li>Hover On </li>
+            <li>Hover Off</li>
+            <li>Click</li>
+        </ul>
+        </div>
+            
+        <div class="column" >
+        <h3>RULES:</h3>
+        <h4>Buy Now Button</h4>
+        <ul>
+            <li>Hover On- Cursor changes to finger and button inverts color to red</li>
+            <li>Hover Off- Cursor changes back to pointer and button returns to original purple color </li>
+            <li>Click- User clicks on button and a loading page opens with purple background and bubbles floating from bottom of screen up for .8 seconds then the Amazon page opens</li>
+        </ul>
+        </div>
+        
+        <div class="column">
+        <h3>FEEDBACK:</h3>
+            <h4>Buy Now Button</h4>
+            <ul>
+                <li>Hover On- Cursor changes to finger and button inverts color to red</li>
+                <li>Hover Off- Cursor changes back to pointer and button returns to original purple color </li>
+                <li>Click- User clicks on button and a loading page opens with purple background and bubbles floating from bottom of screen up for .8 seconds then the Amazon page opens</li>
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h3>LOOPS &amp; MODES:</h3>
+        <ul>
+            <li>Loops: None</li>
+            <li>Mode: Buy now button switching colors on Hover on/off</li>
+        </ul>
+        </div>
+        </div>        
+
     <h2>Cherry Soda label</h2>
     <div class="row">
         <div class="column">
@@ -126,6 +166,18 @@
         </div>
         </div>
 
+<div class="loading-overlay" id="loadingOverlay">
+<div class="bubble-container">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</div>
+</div>
+        
+
     <script>
         function toggleImage() {
         const cherryColaImage = document.getElementById('cherryColaImage'); 
@@ -148,6 +200,17 @@
     function invertColors() { document.getElementById('productCard').classList.add('invert'); } 
     function revertColors() { document.getElementById('productCard').classList.remove('invert'); }
     
+    function showLoadingAndRedirect() {
+      const overlay = document.getElementById('loadingOverlay');
+      overlay.classList.add('show'); 
+
+      setTimeout(function() {
+        window.location.href = 'https://www.amazon.com/poppi-Sparkling-Prebiotic-Strawberry-Raspberry/dp/B0D54RL466?th=1'; 
+      }, 800); 
+    }
+
+    document.getElementById('buyNowBtn').addEventListener('click', showLoadingAndRedirect);
+
     </script>
 </body>
 </html>
