@@ -65,9 +65,15 @@ box-sizing: border-box;
 }
 
 .visualizations img {
-  width: 300px; 
+  width: 370px; 
   height: auto; 
   margin-bottom: 30px; 
+}
+
+.visualizations li {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 a {
