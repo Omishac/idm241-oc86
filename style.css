@@ -1,65 +1,292 @@
+.product-container { 
+  display: flex; 
+  justify-content: space-around;
+  flex-wrap: wrap; 
+}
+
+li {
+  margin-bottom: 10px; 
+}
+
+.card {
+  border: 2px solid #700058;
+  max-width: 300px;
+  width: 400px;
+  height: 400px;
+  margin: 15px auto;
+  margin-top: 30px;
+  text-align: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+  background-image: linear-gradient(red, #700058);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover { 
+  box-shadow: 0 8px 32px #700058;  
+}
+
+#productCard2 { 
+  background-image: linear-gradient(to bottom, #ee945d 50% , #ffe6d0); 
+  border: 2px solid #f9c99f;
+} 
+
+
+#productCard2:hover { 
+  box-shadow: 0 8px 32px #f95f00;
+}
+
+h1{
+  color: red;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  padding-top: 10px;
+  margin-bottom: -20px;
+  position: relative;
+  top: -30px; 
+  transition: color 0.5s ease;
+}
+
+#productCard2 h1 { 
+  color: #ec6433; 
+}
+
+
+h2{
+  margin-top: 60px;
+  margin-bottom: -5px;
+}
+
+img {
+  width: 320px;
+  margin-top: -29px;
+  margin-left: -20px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#orangeColaImage {
+  width: 300px; /* Set a fixed width */
+  margin-left: -3px;
+  margin-top: -7px;
+
+}
+
+.fade-out { 
+  opacity: 0; 
+}
+
+.fade-in { 
+  opacity: 1; 
+}
+
+.buy-now-btn {
+border: 3px solid red;
+padding: 12px;
+color: red;
+font-weight: bold;
+background-color: #700058;
+cursor: pointer;
+width: 115%;
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
+border-radius: 25px;
+margin-left: -20px;
+margin-right: -20px;
+margin-bottom: 200px;
+transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.buy-now-btn:hover {
+color:#700058;
+background-color: red;
+}
+
+#productCard2 .buy-now-btn {
+  border: 3px solid orange;
+  color: #ec6433;
+  background-color: #ffe6d0;
+}
+
+#productCard2 .buy-now-btn:hover { 
+  color: #ffe6d0; 
+  background-color: #ec6433; 
+}
+
+.soda-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+position: absolute;
+bottom: 10px; 
+left: 10px; 
+width: 50px; 
+height: 100px; 
+}
+
+.soda-btn img {
+width: 30px; 
+height: auto; 
+object-fit: contain; 
+}
+
 body {
-    font-family: 'Courier New', Courier, monospace; 
-    background-color: #FFB6C1;
-    margin: 0;
-    padding-left: 40px; 
-    padding-right: 40px; 
-}
-
-a {
-    color: black; 
-}
-
-a:visited {
-    color: black;
+font-family: 'Courier New', Courier, monospace; 
+background-color: #ece5f8;
+margin: 0;
+padding-left: 40px; 
+padding-right: 40px; 
 }
 
 h4{
-    font-style: italic;
+color:#d52491;
+font-style: italic;
+}
+
+h3{
+color:#700058;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.column {
+flex: 1 1 calc(25% - 30px); 
+margin: 15px; 
+box-sizing: border-box; 
+}
+
+@media (max-width: 900px) {
+  .row {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card { 
+    margin-top: 70px;
+  }
+
+  .product-container{
+    gap: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+      grid-template-columns: 1fr; 
+  }
+
+  .card { 
+    margin-top: 70px;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+
+.card.invert { 
+  background-image: linear-gradient(100deg, #700058, red); 
+  cursor: pointer;
+  animation: hoverEaseIn 0.5s ease-in forwards;
+  transition: background-image 0.5s ease-in;
+}
+
+.card.invert h1 {
+  color: #700058;
+}
+
+#productCard2.invert {
+  background-image: linear-gradient(125deg, #ffe6d0, #ee945d);
+  cursor: pointer;
+  animation: hoverEaseIn 0.5s ease-in forwards;
+  transition: background-image 0.5s ease-in;
+}
+
+#productCard2.invert h1 {
+  color: #ffe6d0;
+}
+ 
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffb668ec; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden; 
+  opacity: 0; 
+  transition: visibility 0s 0.5s, opacity 0.5s ease; 
+  z-index: 1000;
 }
 
 
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 30px; 
-    }
-
-    h3 {
-        font-size: 24px; 
-    }
-
-    h4 {
-        font-size: 20px; 
-    }
-
-    li {
-        font-size: 18px; 
-    }
-
-    body {
-        padding-left: 10px;
-    }
+.loading-overlay.show {
+  visibility: visible;
+  opacity: 1; 
+  transition-delay: 0s; 
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px; 
-    }
+.bubble-container {
+  position: relative;
+  width: 300px; 
+  height: 250px;
+  overflow: hidden;
+}
 
-    h3 {
-        font-size: 20px; 
-    }
 
-    h4 {
-        font-size: 18px; 
-    }
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background-color:#ca77defa;
+  border-radius: 50%;
+  animation: float 0.8s ease-in infinite;
+  opacity: 0.8;
+}
 
-    li {
-        font-size: 16px; 
-    }
 
-    body {
-        padding-left: 5px; 
-    }
+.bubble:nth-child(1) { left: 20px; animation-delay: 0s; width: 25px; height: 25px; }
+.bubble:nth-child(2) { left: 60px; animation-delay: 0.1s; width: 20px; height: 20px; }
+.bubble:nth-child(3) { left: 100px; animation-delay: 0.2s; width: 15px; height: 15px; }
+.bubble:nth-child(4) { left: 140px; animation-delay: 0.4s; width: 30px; height: 30px; }
+.bubble:nth-child(5) { left: 180px; animation-delay: 0.5s; width: 16px; height: 18px; }
+
+
+@keyframes float {
+  0% {
+    bottom: 0;
+    opacity: 0.8;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
 }

@@ -3,95 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Build</title>
+    <title>Final Build</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<h2>Final Build</h2>
 <body>
-    <div class="card">
-        <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> <h1>Cherry Soda</h1>
-        <button class="buy-now-btn">Buy Now</button> 
-
-        <button type="button" class="soda-btn" onclick="toggleImage()">
-            <img src="./sodacan.png" alt="Soda Button Image">
-        </button> 
+    <div class="product-container">
+        <div class="card" id="productCard1">
+            <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> 
+            <h1 onmouseover="invertColors('productCard1')" onmouseout="revertColors('productCard1')">Cherry Soda</h1> 
+            <button class="buy-now-btn" id="buyNowBtn1">Buy Now</button>
+            <button type="button" class="soda-btn" onclick="toggleImage('cherryColaImage')"> 
+                <img src="./sodacan.png" alt="Soda Button Image"> 
+            </button>
+        </div>
+        <div class="card" id="productCard2">
+            <img src="./orange-cola.png" alt="Orange Soda" id="orangeColaImage"> 
+            <h1 onmouseover="invertColors('productCard2')" onmouseout="revertColors('productCard2')">Orange Soda</h1> 
+            <button class="buy-now-btn" id="buyNowBtn2">Buy Now</button>
+            <button type="button" class="soda-btn" onclick="toggleImage('orangeColaImage')"> 
+                <img src="./sodacan2.png" alt="Soda Button Image"></button>
+        </div>
     </div>
-    <div class="row">
-        <div class="column">
-          <h3>TRIGGERS:</h3>
-          <h4>Soda Icon - Default</h4>
+    
+    
+<div class="row">
+    <div class="column">
+    <h3>TRIGGERS:</h3>
     <ul>
-        <li>Hover On </li>
-        <li>Hover Off</li>
-        <li>Click On</li>
-        <li>Click Off</li>
+        <li>Hover On/Off Buy Now Button</li>
+        <li>Click Buy Now Button</li>
+        <li>Click On/Off Soda Icon: Active</li>
+        <li>Click On/Off Soda Icon: Default</li>
+        <li>Hover On/Off Soda Label</li>
+        <li>Mouse Down/Up Soda Image</li>
+        <li>Hover On/Off Product Card</li>
+    
+    </ul>
+    </div>
+        
+    <div class="column" >
+    <h3>RULES:</h3>
+    
+    <h4>Buy Now Button</h4>
+    <ul>
+        <li>Hover On- Cursor changes to finger and button & text color changes</li>
+        <li>Hover Off- Cursor changes back to pointer and button returns to original button color & text </li>
+        <li>Click- User clicks on button and a loading page opens with orange background and purple bubbles floating up before going to the soda's Amazon page opens</li>
     </ul>
     
-    <h4>Soda Icon - Active</h4>
+    <h4>Click Soda Icon: Active</h4>
     <ul>
-        <li>Hover On </li>
-        <li>Hover Off</li>
-        <li>Click On</li>
-        <li>Click Off</li>
+        <li>Click On- Soda card shakes and fades into the image of back of can</li> 
+        <li>Click Off- Soda card shakes and fades into the image of front of can</li> 
     </ul>
-        </div>
-
-        <div class="column" >
-            <h3>RULES:</h3>
-            <h4>Soda Icon - Default</h4>
-            <ul>
-                <li>Hover On- Cursor changes to finger </li>
-                <li>Hover Off- Cursor changes back to pointer</li>
-                <li>Click On- Soda Image changes to back of can</li>
-                <li>Click Off- Soda Image changes to front of can</li>
-            </ul>
-            <h4>Soda Icon - Active</h4>
-            <ul>
-                <li>Hover On- Cursor changes to finger </li>
-                <li>Hover Off- Cursor changes back to pointer</li>
-                <li>Click On- Soda Image changes to front of Soda Can</li>
-                <li>Click Off- Soda Image changes to back of can</li>
-            </ul>
-        </div>
-
-        <div class="column">
-            <h3>FEEDBACK:</h3>
     
-    <h4>Soda Icon - Default</h4>
+    <h4>Click Soda Icon: Default</h4>
     <ul>
-        <li>Hover On- Cursor changes to finger </li>
-        <li>Hover Off- Cursor changes back to pointer</li>
-        <li>Click On- Soda Image changes to back of can</li>
-        <li>Click Off- Soda Image changes to front of can</li>
-      
+        <li>Click On- Soda card shakes and fades into the image of front of can</li> 
+        <li>Click Off- Soda card shakes and fades into the image of back of can</li> 
     </ul>
-    <h4>Soda Icon - Active</h4>
+    
+    <h4>Hover On/Off Soda Label</h4>
     <ul>
-        <li>Hover On- Cursor changes to finger </li>
-        <li>Hover Off- Cursor changes back to pointer</li>
-        <li>Click On- Soda Image changes to front of Soda Can</li>
-        <li>Click Off- Soda Image changes to back of can</li>
-    </ul>       
-        </div>
+        <li>Hover On- Cursor changes to finger and product card inverts background gradient</li>
+        <li>Hover Off- Cursor changes back to pointer and product card reverts to original background gradient</li>
+    </ul>
+    
+    <h4>Mouse Down/Up Soda Image</h4>
+    <ul>
+        <li>Mouse Down- Soda can shakes when mouse down</li>
+        <li>Mouse Up- The user is taken to the soda flavor product page</li>
+    </ul> 
+    
+    <h4>Hover On/Off Product Card</h4>
+    <ul>
+        <li>Hover On- Product card has a drop shadow when user hover on the product card </li>
+        <li>Hover Off- The drop shadow is removed when user hovers off the product card </li>
+    </ul>
+    
+    </div>
+    
+    <div class="column">
+    <h3>FEEDBACK:</h3>
 
-        <div class="column">
-            <h3>LOOPS &amp; MODES:</h3>
-        <ul>
-            <li>Loops: None</li>
-            <li>Mode: Soda image switches between front view and back view</li>
-        </ul>
-        </div>
-      </div>
+    <h4>Buy Now Button</h4>
+    <ul>
+        <li>Hover On- Cursor changes to finger and button & text color changes</li>
+        <li>Hover Off- Cursor changes back to pointer and button returns to original button color & text </li>
+        <li>Click- User clicks on button and a loading page opens with orange background and purple bubbles floating up before going to the soda's Amazon page opens</li>
+    </ul>
+    
+    <h4>Click Soda Icon: Active</h4>
+    <ul>
+        <li>Click On- Soda card shakes and fades into the image of back of can</li> 
+        <li>Click Off- Soda card shakes and fades into the image of front of can</li> 
+    </ul>
+    
+    <h4>Click Soda Icon: Default</h4>
+    <ul>
+        <li>Click On- Soda card shakes and fades into the image of front of can</li> 
+        <li>Click Off- Soda card shakes and fades into the image of back of can</li> 
+    </ul>
+    
+    <h4>Hover On/Off Soda Label</h4>
+    <ul>
+        <li>Hover On- Cursor changes to finger and product card inverts background gradient</li>
+        <li>Hover Off- Cursor changes back to pointer and product card reverts to original background gradient</li>
+    </ul>
+    
+    <h4>Mouse Down/Up Soda Image</h4>
+    <ul>
+        <li>Mouse Down- Soda can shakes when mouse down</li>
+        <li>Mouse Up- The user is taken to the soda flavor product page</li>
+    </ul> 
+    
+    <h4>Hover On/Off Product Card</h4>
+    <ul>
+        <li>Hover On- Product card has a drop shadow when user hover on the product card </li>
+        <li>Hover Off- The drop shadow is removed when user hovers off the product card </li>
+    </ul>
+    
+    </div>
+    
+    <div class="column">
+        <h3>LOOPS &amp; MODES:</h3>
+    
+    <h4>Buy Now Button</h4>
+    <ul>
+        <li>Loops: None</li>
+        <li>Mode: None</li>
+    </ul>
+    
+    <h4>Click Soda Icon: Active</h4>
+    <ul>
+        <li>Loops: None</li>
+        <li>Mode: Soda image switches between front view and back view  </li>
+    </ul>
+    
+    <h4>Click Soda Icon: Default</h4>
+    <ul>
+        <li>Loops: None</li>
+        <li>Mode: Soda image switches between front view and back view</li>
+    </ul>
+    
+    <h4>Hover On/Off Soda label</h4>
+    <ul>
+        <li>Loops: None</li>
+        <li>Mode: None</li>
+    </ul>
+    
+    <h4>Mouse Down/Up Soda Image</h4>
+    <ul>
+        <li>Loops: None</li>
+        <li>Mode: None</li>
+    </ul>
+    
+    <h4>Hover On/Off Product Card</h4>
+    <ul>
+        <li>Loops: None</li>
+        <li>Mode: None</li>
+    </ul>
+    
+    </div>
+    </div>
 
-    <script>
-        function toggleImage() {
-            const cherryColaImage = document.getElementById('cherryColaImage');
+<div class="loading-overlay" id="loadingOverlay">
+<div class="bubble-container">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</div>
+</div>
+        
 
-            if (cherryColaImage.src.includes('cherry-cola.png')) {
-                cherryColaImage.src = 'cherry-cola2.png'; 
-            } else {
-                cherryColaImage.src = 'cherry-cola.png'; 
-            }
-        }
-    </script>
+<script>
+function toggleImage(imageId) {
+const sodaImage = document.getElementById(imageId); 
+const card = sodaImage.closest('.card'); 
+
+sodaImage.classList.add('fade-out');
+
+setTimeout(() => {
+    if (sodaImage.src.includes('cherry-cola.png')) {
+        sodaImage.src = 'cherry-cola2.png'; 
+    } else if (sodaImage.src.includes('orange-cola.png')) { 
+        sodaImage.src = 'orange-cola2.png'; 
+    } else if (sodaImage.src.includes('cherry-cola2.png')) { 
+        sodaImage.src = 'cherry-cola.png'; 
+    } else if (sodaImage.src.includes('orange-cola2.png')) { 
+        sodaImage.src = 'orange-cola.png'; 
+    }
+
+    sodaImage.classList.remove('fade-out'); 
+    sodaImage.classList.add('fade-in');
+
+    setTimeout(() => { 
+        sodaImage.classList.remove('fade-in'); 
+    }, 500); 
+}, 500);
+
+card.classList.add('shake');
+
+setTimeout(() => {
+    card.classList.remove('shake');
+}, 500);
+}
+
+function invertColors(cardId) { 
+    document.getElementById(cardId).classList.add('invert'); 
+}
+
+function revertColors(cardId) { 
+    document.getElementById(cardId).classList.remove('invert'); 
+}
+
+function showLoadingAndRedirect(buttonId) {
+    const overlay = document.getElementById('loadingOverlay');
+    overlay.classList.add('show');
+
+setTimeout(function() {
+    overlay.classList.remove('show');
+    if (buttonId === 'buyNowBtn2') {
+        window.open('https://www.amazon.com/Sparkling-Prebiotic-Immunity-Benefits-Beverages/dp/B0CZY4H7K5/ref=sr_1_2?dib=eyJ2IjoiMSJ9.4Yhy4ok1SyemUg-8ZwCVSNyiypTN5HyOxjjbmfKc4fk.MW1-FVK_rZAyenu63koKLu6QhtSJSNcKnj1Trs5a_ig&dib_tag=se&keywords=poppi%2Bfun%2Bfavs&m=A2H559W55KIF38&qid=1712169453&s=merchant-items&sr=1-2&th=1', '_blank');
+    } else {
+        window.open('https://www.amazon.com/poppi-Sparkling-Prebiotic-Strawberry-Raspberry/dp/B0D54RL466?th=1', '_blank');
+    }
+}, 800); 
+}
+
+document.getElementById('buyNowBtn1').addEventListener('click', () => showLoadingAndRedirect('buyNowBtn1'));
+document.getElementById('buyNowBtn2').addEventListener('click', () => showLoadingAndRedirect('buyNowBtn2'));
+
+const cherryColaImage = document.getElementById('cherryColaImage');
+cherryColaImage.addEventListener('mousedown', function() { cherryColaImage.classList.add('shake'); 
+});
+
+cherryColaImage.addEventListener('mouseup', function() { cherryColaImage.classList.remove('shake'); 
+window.open('https://drinkpoppi.com/products/cherry-cola', '_blank');
+});
+
+cherryColaImage.addEventListener('mouseleave', function() { cherryColaImage.classList.remove('shake'); 
+});
+
+const orangeColaImage = document.getElementById('orangeColaImage');
+orangeColaImage.addEventListener('mousedown', function() { orangeColaImage.classList.add('shake'); 
+});
+
+orangeColaImage.addEventListener('mouseup', function() { orangeColaImage.classList.remove('shake'); 
+window.open('https://drinkpoppi.com/products/orange-cream', '_blank');
+});
+
+orangeColaImage.addEventListener('mouseleave', function() { orangeColaImage.classList.remove('shake'); 
+});
+
+
+
+</script>
 </body>
 </html>
