@@ -1,97 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Build</title>
+    <title>Case Study Template</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <img src="./cherry-cola.png" alt="Cherry Soda" id="cherryColaImage"> <h1>Cherry Soda</h1>
-        <button class="buy-now-btn">Buy Now</button> 
-
-        <button type="button" class="soda-btn" onclick="toggleImage()">
-            <img src="./sodacan.png" alt="Soda Button Image">
-        </button> 
-    </div>
-    <div class="row">
-        <div class="column">
-          <h3>TRIGGERS:</h3>
-          <h4>Soda Icon - Default</h4>
-    <ul>
-        <li>Hover On </li>
-        <li>Hover Off</li>
-        <li>Click On</li>
-        <li>Click Off</li>
-    </ul>
-    
-    <h4>Soda Icon - Active</h4>
-    <ul>
-        <li>Hover On </li>
-        <li>Hover Off</li>
-        <li>Click On</li>
-        <li>Click Off</li>
-    </ul>
-        </div>
-
-        <div class="column" >
-            <h3>RULES:</h3>
-            <h4>Soda Icon - Default</h4>
-            <ul>
-                <li>Hover On- Cursor changes to finger </li>
-                <li>Hover Off- Cursor changes back to pointer</li>
-                <li>Click On- Soda Image changes to back of can</li>
-                <li>Click Off- Soda Image changes to front of can</li>
-            </ul>
-            <h4>Soda Icon - Active</h4>
-            <ul>
-                <li>Hover On- Cursor changes to finger </li>
-                <li>Hover Off- Cursor changes back to pointer</li>
-                <li>Click On- Soda Image changes to front of Soda Can</li>
-                <li>Click Off- Soda Image changes to back of can</li>
-            </ul>
-        </div>
-
-        <div class="column">
-            <h3>FEEDBACK:</h3>
-    
-    <h4>Soda Icon - Default</h4>
-    <ul>
-        <li>Hover On- Cursor changes to finger </li>
-        <li>Hover Off- Cursor changes back to pointer</li>
-        <li>Click On- Soda Image changes to back of can</li>
-        <li>Click Off- Soda Image changes to front of can</li>
-      
-    </ul>
-    <h4>Soda Icon - Active</h4>
-    <ul>
-        <li>Hover On- Cursor changes to finger </li>
-        <li>Hover Off- Cursor changes back to pointer</li>
-        <li>Click On- Soda Image changes to front of Soda Can</li>
-        <li>Click Off- Soda Image changes to back of can</li>
-    </ul>       
-        </div>
-
-        <div class="column">
-            <h3>LOOPS &amp; MODES:</h3>
+    <nav class="navbar">
         <ul>
-            <li>Loops: None</li>
-            <li>Mode: Soda image switches between front view and back view</li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#context-challenge">Context & Challenge</a></li>
+            <li><a href="#process-insight">Process & Insight</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#results">Results</a></li>
         </ul>
-        </div>
-      </div>
+    </nav>
+    <header class="hero">
+        <img src="heroimage.png" alt="Final Project Hero Image" class="hero-image">
+    </header>
+    <main>
+        <h1>Case Study: Poppi Soda Product Card </h1>
+        <section id="overview" class="overview">
+            <h2>The Overview</h2>
+            <p>This project focuses on the redesign of the Poppi Soda product card to enhance user engagement and improve the visual representation of the brand's identity. Poppi Soda, known for its vibrant and health-focused beverages, aims to stand out through innovative design and an approachable aesthetic. The redesigned product card prioritizes functionality, interactivity, and an engaging user experience while showcasing key product details.
+                The primary goals of the redesign include capturing the brand's playful essence, streamlining usability, and creating microinteractions that delight and inform users, ultimately driving higher conversion rates.</p>
+        </section>
 
-    <script>
-        function toggleImage() {
-            const cherryColaImage = document.getElementById('cherryColaImage');
+        <section id="context-challenge" class="context-challenge">
+            <h2>Context and Challenge</h2>
+            <div class="context">
+                <ul>
+                    <li>Description:</li>
+                    <li>Timeline: 10-weeks</li>
+                    <li>Purpose: </li>
+                </ul>
+            </div>
+            <div class="problem">
+                <h3>The Problem</h3>
+                <p>Currently, the Poppi Soda product cards lack interactivity. The design of the card is more static which led to low engagement and limited user exploration.</p>
+            </div>
+            <div class="goals">
+                <h3>Goals & Objectives</h3>
+                <p>What are the metrics that define success, tangible goals, and whether it was a solo or team-based project. Include your role if applicable.</p>
+            </div>
+        </section>
 
-            if (cherryColaImage.src.includes('cherry-cola.png')) {
-                cherryColaImage.src = 'cherry-cola2.png'; 
-            } else {
-                cherryColaImage.src = 'cherry-cola.png'; 
-            }
-        }
-    </script>
+        <section id="process-insight" class="process-insight">
+            <h2>Process and Insight</h2>
+            <p>Describe the steps taken to develop the solution, including research, personas, wireframes, testing, and more.</p>
+            <ul>
+                <li>Target Audience / User Personas</li>
+                <li>Style Guide</li>
+                <li>Prototypes</li>
+                <li>UX Testing Notes</li>
+            </ul>
+        </section>
+
+        <section id="solution" class="solution">
+            <h2>The Solution</h2>
+            <h4>Link to live Project:</h4>
+            <p>Showcase the final design with detailed images, videos, and links. Highlight features like UX, navigation, and more.</p>
+        </section>
+
+        <section id="results" class="results">
+            <h2>The Results</h2>
+            <p>Summarize the success metrics (qualitative and quantitative), include client testimonials if applicable, and define lessons learned.</p>
+        </section>
+    </main>
 </body>
 </html>
