@@ -1,4 +1,4 @@
-/* Base Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0; 
@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
- h3 {
+h3 {
     color: #e99a46;
     margin-bottom: 10px;
     text-align: left;
@@ -63,48 +63,110 @@ main {
 .hero {
     position: relative;
     background-color: #ece5f8;
-    display: flex;       /* Enables flexbox */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
+    display: flex;      
+    justify-content: center; 
+    align-items: center; 
 
 }
 
 .hero-image {
     margin-top: 50px;
     width: 900px;
+    max-width: 100%; 
     height: auto;
-    display: block; /* Removes any extra spacing from inline elements */
+    display: block; 
 }
 
-/* Section Styles */
+
 section {
     padding: 15px;
-    margin: 20px auto; /* Add space between boxes */
-    width: 1400px; /* Control the width of the box */
-    border: 1px solid #ccc; /* Light border to define the box */
-    border-radius: 5px; /* Rounded corners */
+    margin: 20px auto; 
+    width: 90%;  
+    max-width: 1400px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
 }
 
-/* Custom Background Colors for Each Section */
-
-/* Section Titles */
 section h2 {
     color: #700058;
     text-align: left;
 }
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
+    .navbar ul {
+        align-items: center;
+    
+    }
+
+    .hero-image {
+        width: 100%; 
     }
 
     section {
-        padding: 15px;
+        width: 95%; 
     }
-
-    ul {
-        padding-left: 15px;
+    img{
+        width: 400px;
+    }
+    video{
+        width: 400px;
     }
 }
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .navbar ul li {
+        margin: 5px 0; 
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em; 
+    }
+
+    .hero {
+        padding: 10px;
+    }
+    img{
+        width: 300px;
+    }
+    video{
+        width: 300px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #700058;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 636px) {
+    .navbar {
+        display: none; 
+    }
+}
+
