@@ -7,11 +7,12 @@ body {
     color: #333;
 }
 
-h2, h3 {
-    color: #222;
+ h3 {
+    color: #e99a46;
     margin-bottom: 10px;
     text-align: left;
 }
+
 
 h1{
     margin-bottom: 10px;
@@ -88,7 +89,7 @@ section {
 
 /* Section Titles */
 section h2 {
-    color: #333;
+    color: #700058;
     text-align: left;
 }
 
